@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projeto_library.MenuUsuarioController">
+   <top>
+      <Pane prefHeight="47.0" prefWidth="700.0" style="-fx-background-color: #E8D3B6;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="56.0" fitWidth="56.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@firelogo.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+   </top>
+   <left>
+      <Pane prefHeight="354.0" prefWidth="169.0" style="-fx-background-color: #BF9563;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="-1.0" layoutY="47.0" prefHeight="308.0" prefWidth="171.0">
+               <children>
+                  <Line endX="68.29289245605469" startX="-100.0" />
+                  <JFXButton fx:id="botao_acervo" alignment="BASELINE_LEFT" onAction="#acervo_usuario" prefHeight="58.0" prefWidth="171.0" text="Acervo">
+                     <font>
+                        <Font name="Reem Kufi Regular" size="18.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.8767772511848341" endY="0.5639810426540285" startX="0.6303317535545024" startY="0.33649289099526064">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.6092592477798462" blue="0.023148147389292717" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@book_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="botao_pedir" alignment="BASELINE_LEFT" onAction="#pedir_usuario" prefHeight="59.0" prefWidth="202.0" text="Pedir Livros">
+                     <font>
+                        <Font name="Reem Kufi Regular" size="18.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.8767772511848341" endY="0.5639810426540285" startX="0.6303317535545024" startY="0.33649289099526064">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.6092592477798462" blue="0.023148147389292717" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@bookp_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="botao_not" alignment="BASELINE_LEFT" onAction="#notifications_usuarios" prefHeight="59.0" prefWidth="202.0" text="Notificações">
+                     <font>
+                        <Font name="Reem Kufi Regular" size="18.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.8767772511848341" endY="0.5639810426540285" startX="0.6303317535545024" startY="0.33649289099526064">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.6092592477798462" blue="0.023148147389292717" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@not_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Label alignment="TOP_CENTER" layoutX="61.0" layoutY="9.0" text="Menu" textFill="WHITE">
+               <font>
+                  <Font name="Reem Kufi Regular" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="600.0" endY="-1.20709228515625" layoutX="100.0" startX="-100.0" startY="-1.20709228515625" />
+            <Line endX="169.0" endY="354.0" startX="169.0" />
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="area_conteudo" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
