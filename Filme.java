@@ -7,7 +7,7 @@ public class Filme extends Produto
     private String genero;
     private int ano;
 
-    public  Filme(String nome_produto, String descricao, String diretor,String estudio, String genero, int estoque,int ano, float preco,float duracao)
+    public  Filme(String nome_produto, String descricao, String diretor, String estudio, String genero, int estoque, int ano, float preco, float duracao)
     {
         super(nome_produto,descricao,estoque,preco);
 
