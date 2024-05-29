@@ -7,6 +7,7 @@ public class UsuarioDaoImp implements UsuarioDao{
 
     private static UsuarioDaoImp intance;
     public List<Usuario>usuarios;
+    private int index;
 
 
     private UsuarioDaoImp()
@@ -32,6 +33,18 @@ public class UsuarioDaoImp implements UsuarioDao{
         usuarios.add(usuario);
     }
 
+    @Override
+    public void updateUsuario(int index, Usuario usuario) {
+        usuarios.set(index,usuario);
+    }
+
+    @Override
+    public Usuario getUsuario(int index)
+    {
+        return usuarios.get(index);
+    }
+
+
     public static synchronized UsuarioDaoImp getInstance()
     {
         if(intance == null)
@@ -39,6 +52,16 @@ public class UsuarioDaoImp implements UsuarioDao{
            intance=new UsuarioDaoImp();
         }
         return intance;
+    }
+
+    public  void setIndex(int index)
+    {
+        this.index=index;
+    }
+
+    public int getIndex()
+    {
+        return  index;
     }
 
 
