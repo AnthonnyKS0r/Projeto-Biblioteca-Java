@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projeto_library.MenuAdmController">
+   <top>
+      <Pane prefHeight="69.0" prefWidth="1024.0" style="-fx-background-color: #E8D3B6;" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8d3b6" height="69.0" layoutX="-2.0" smooth="false" stroke="BLACK" strokeType="INSIDE" width="81.0" />
+            <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="-1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@firelogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="721.0" prefWidth="259.0" style="-fx-background-color: #BF9563;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="-1.0" layoutY="75.0" prefHeight="647.0" prefWidth="261.0">
+               <children>
+                  <Line endX="159.2928924560547" endY="1.2928931713104248" smooth="false" startX="-100.0" />
+                  <JFXButton fx:id="botao_update" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#acervo_atualizar" prefHeight="119.0" prefWidth="261.0" text="  Atualizar  Acervo" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Reem Kufi Regular" size="31.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.8767772511848341" endY="0.5639810426540285" startX="0.6303317535545024" startY="0.33649289099526064">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.6092592477798462" blue="0.023148147389292717" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@update_book.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="botao_add" alignment="BASELINE_LEFT" prefHeight="124.0" prefWidth="261.0" text="Adcionar Material" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Reem Kufi Regular" size="31.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.8767772511848341" endY="0.5639810426540285" startX="0.6303317535545024" startY="0.33649289099526064">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.6092592477798462" blue="0.023148147389292717" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@bookp_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="botao_mensagem" alignment="BASELINE_LEFT" prefHeight="130.0" prefWidth="261.0" text="Enviar Mensagens" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Reem Kufi Regular" size="31.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.8767772511848341" endY="0.5639810426540285" startX="0.6303317535545024" startY="0.33649289099526064">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.6092592477798462" blue="0.023148147389292717" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@mensage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="botao_configs" alignment="BASELINE_LEFT" prefHeight="114.0" prefWidth="261.0" text="Configurações">
+                     <font>
+                        <Font name="Reem Kufi Regular" size="28.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.8767772511848341" endY="0.5639810426540285" startX="0.6303317535545024" startY="0.33649289099526064">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.6092592477798462" blue="0.023148147389292717" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Label alignment="TOP_CENTER" layoutX="75.0" layoutY="8.0" text="Menu" textFill="WHITE">
+               <font>
+                  <Font name="Reem Kufi Regular" size="37.0" />
+               </font>
+            </Label>
+            <Line endX="924.0" layoutX="100.0" smooth="false" startX="-100.0" startY="-1.20709228515625" />
+            <Line endX="259.0" endY="700.8333129882812" startX="259.0" startY="-0.70709228515625" />
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="area_trabalho" layoutX="1.0" prefHeight="721.0" prefWidth="854.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
