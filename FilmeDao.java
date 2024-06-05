@@ -12,5 +12,11 @@ public interface FilmeDao
 
     public void updateFilme(int index, Filme filme);
 
-    public Livro getfilme(int index);
+    public Filme getfilme(int index);
+
+    //Método para procurar filmes
+
+    public Filme procurarFilme(String NomeFilme);
+    
+    
 }
