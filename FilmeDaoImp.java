@@ -58,4 +58,17 @@ public class FilmeDaoImp implements FilmeDao
         return instance;
     }
 
+    @Override
+    public Filme procurarFilme(String NomeFilme)
+      for (Filmes filme : filmes)
+        {
+            if (NomeFilme.equals(filme.getnome_produto())) 
+            {
+                return filme;
+                break; // Parar após encontrar o filme
+            }
+        }
+
+
+    
 }
