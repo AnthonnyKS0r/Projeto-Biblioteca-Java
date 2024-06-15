@@ -71,4 +71,16 @@ public class LivrosDaoImp implements LivrosDao{
     {
         return  index;
     }
+
+     @Override
+    public Livros procurarLivro(String NomeLivro)
+      for (Filmes livro : livro)
+        {
+            if (NomeLivro.equals(livro.getnome_produto())) 
+            {
+                return livro;
+                break; // Parar após encontrar o livro
+            }
+        }
+    
 }
