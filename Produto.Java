@@ -1,6 +1,6 @@
-public class Produto
-{
+package com.example.projeto_library;
 
+public class Produto {
     private String nome_produto;
 
     private String descricao;
@@ -15,6 +15,11 @@ public class Produto
         this.descricao = descricao;
         this.estoque = estoque;
         this.preco = preco;
+
+    }
+
+    public Produto()
+    {
 
     }
 
@@ -69,5 +74,4 @@ public class Produto
     {
         return preco;
     }
-
 }
