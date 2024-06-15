@@ -13,4 +13,6 @@ public interface LivrosDao {
     public void updateLivro(int index, Livros livro);
 
     public Livros getlivro(int index);
+
+     public Livros procurarilme(String NomeLivro);
 }
