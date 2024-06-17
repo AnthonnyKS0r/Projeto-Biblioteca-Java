@@ -1,4 +1,4 @@
-package Controller;
+package com.example.projeto_library;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class PedirLivrosController implements Initializable {
@@ -41,6 +42,10 @@ public class PedirLivrosController implements Initializable {
 
     @FXML
     private Label preco;
+
+
+    @FXML
+    private Label erro_debito;
 
     private int index_escolhido;
 
@@ -84,30 +89,47 @@ public class PedirLivrosController implements Initializable {
 
         erro.setText("");
         erro1.setText("");
+        erro_debito.setText("");
 
-
+        Boolean devendo = false;
         LocalDate data_entrega = escolha_data.getValue();
         LocalDate hoje = LocalDate.now();
         LocalDate duasSemanas = hoje.plusWeeks(2);
         String nome_livro = escolha_livro.getValue();
 
-        if(livrosDao.livros.get(index_escolhido).getestoque()-1>=0)
+        for(int i=0;i<usuarioDao.usuarios.get(usuarioDao.getIndex()).wishlist.size();i++)
         {
-            if(data_entrega!=null && (data_entrega.isEqual(hoje))||data_entrega.isAfter(hoje)&&data_entrega.isBefore(duasSemanas))
+            LocalDate verificar_debito = usuarioDao.usuarios.get(usuarioDao.getIndex()).getDesejos(i).getData_entrega();
+            if(verificar_debito.isEqual(LocalDate.now())||verificar_debito.isBefore(LocalDate.now()))
             {
-                Desejos novo_desejo = new Desejos(livrosDao.livros.get(index_escolhido).getnome_produto(),data_entrega);
-                usuarioDao.usuarios.get(usuarioDao.getIndex()).wishlist.add(novo_desejo);
+                devendo=true;
+            }
+        }
+
+        if(devendo==false)
+        {
+            if (livrosDao.livros.get(index_escolhido).getestoque() - 1 >= 0) {
+                if (data_entrega != null && (data_entrega.isEqual(hoje)) || data_entrega.isAfter(hoje) && data_entrega.isBefore(duasSemanas))
+                {
+                    Desejos novo_desejo = new Desejos(livrosDao.livros.get(index_escolhido).getnome_produto(), data_entrega);
+                    usuarioDao.usuarios.get(usuarioDao.getIndex()).wishlist.add(novo_desejo);
+                }
+                else
+                {
+                    erro1.setText("Escolha uma data Válida (No máximo 2 semanas de Hoje ");
+                }
             }
             else
             {
-                erro1.setText("Escolha uma data Válida (No máximo 2 semanas de Hoje ");
+             erro.setText("Desculpe! O Estoque desse produto já se esgotou");
             }
         }
         else
         {
-            erro.setText("Desculpe! O Estoque desse produto já se esgotou");
+            erro_debito.setText("Impossivel continuar a transação devido á debito pendente!");
         }
 
 
     }
 }
+
