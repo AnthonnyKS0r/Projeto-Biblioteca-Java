@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="699.0" prefWidth="764.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projeto_library.AcervoAtualizarController">
+   <children>
+      <Label alignment="CENTER" layoutX="193.0" layoutY="67.0" prefHeight="97.0" prefWidth="381.0" text="Atualização de Acervo">
+         <textFill>
+            <LinearGradient endX="0.7488151658767772" endY="0.7772511848341233" startX="0.4312796208530804" startY="0.4502369668246446">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.6333333253860474" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="Reem Kufi Regular" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="164.0" prefHeight="108.0" prefWidth="714.0" text="Por Favor, selecione o tipo de Mídia que deseja atualizar: " textAlignment="CENTER" wrapText="true">
+         <textFill>
+            <LinearGradient endX="0.7488151658767772" endY="0.7772511848341233" startX="0.4312796208530804" startY="0.4502369668246446">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.6333333253860474" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="Reem Kufi Regular" size="31.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="497.0" layoutY="488.0" onAction="#botaoFilme" prefHeight="52.0" prefWidth="153.0" style="-fx-background-color: BLUE;" text="Filmes" textFill="WHITE">
+         <font>
+            <Font name="Reem Kufi Regular" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="94.0" layoutY="488.0" onAction="#botaolivro" prefHeight="52.0" prefWidth="153.0" style="-fx-background-color: BLUE;" text="Livros" textFill="WHITE">
+         <font>
+            <Font name="Reem Kufi Regular" size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="111.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@e-book.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="499.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movie-clapper-open.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

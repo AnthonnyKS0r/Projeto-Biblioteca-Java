@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="765.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projeto_library.EscreverNotificacaoController">
+   <children>
+      <Label layoutX="20.0" layoutY="21.0" text="Enviar Notificações">
+         <font>
+            <Font name="Reem Kufi Regular" size="31.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.5592417061611374">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.5" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@not_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <ChoiceBox fx:id="escolher_usuario" layoutX="14.0" layoutY="160.0" prefHeight="25.0" prefWidth="315.0" />
+      <Label layoutX="14.0" layoutY="122.0" prefHeight="38.0" prefWidth="642.0" text="Selecione o E-mail para o qual deseja enviar  a notificação:">
+         <font>
+            <Font name="Reem Kufi Regular" size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.5592417061611374">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.5" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="14.0" layoutY="250.0" prefHeight="38.0" prefWidth="134.0" text="Mensagem:">
+         <font>
+            <Font name="Reem Kufi Regular" size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.5592417061611374">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.5" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="mensagem" layoutX="14.0" layoutY="288.0" prefHeight="334.0" prefWidth="737.0" />
+      <JFXButton layoutX="637.0" layoutY="641.0" onAction="#enviarNot" prefHeight="27.0" prefWidth="114.0" style="-fx-background-color: Blue;" text="Enviar" textFill="WHITE">
+         <font>
+            <Font name="Reem Kufi Regular" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</Pane>

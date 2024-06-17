@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="699.0" prefWidth="764.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projeto_library.PedirFilmesController">
+   <children>
+      <Label layoutX="29.0" layoutY="28.0" text="Pedir Filmes">
+         <font>
+            <Font name="Reem Kufi Regular" size="38.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.5734597156398105" startX="0.6208530805687204" startY="0.4549763033175355">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.5827160477638245" blue="0.03703703731298447" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@video_camera.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="8.0" layoutY="118.0" prefHeight="35.0" prefWidth="504.0" text="Entre com o nome do Filme que deseja pedir:" textFill="#ff950a">
+         <font>
+            <Font name="Reem Kufi Regular" size="23.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="escolha_filme" layoutX="8.0" layoutY="153.0" prefHeight="25.0" prefWidth="439.0" />
+      <Label layoutX="8.0" layoutY="326.0" prefHeight="35.0" prefWidth="504.0" text="Detalhes:" textFill="#ff950a">
+         <font>
+            <Font name="Reem Kufi Regular" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="212.0" prefHeight="35.0" prefWidth="504.0" text="Marque a Data de dentrega:" textFill="#ff950a">
+         <font>
+            <Font name="Reem Kufi Regular" size="23.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="escolha_data" layoutX="7.0" layoutY="247.0" prefHeight="25.0" prefWidth="292.0" />
+      <JFXButton alignment="CENTER" layoutX="653.0" layoutY="650.0" onAction="#addToWishList" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: BLUE;" text="  Enviar" textFill="WHITE">
+         <font>
+            <Font name="Reem Kufi Regular" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-arrow-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="274.0" layoutX="8.0" layoutY="361.0" stroke="BLACK" strokeType="INSIDE" width="748.0" />
+      <VBox layoutX="8.0" layoutY="361.0" prefHeight="274.0" prefWidth="103.0">
+         <children>
+            <Label alignment="BASELINE_CENTER" prefHeight="44.0" prefWidth="100.0" text="Nome:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_CENTER" prefHeight="48.0" prefWidth="100.0" text="Diretor:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="100.0" text="Ano:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="100.0" text="Gênero:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="100.0" text="Estúdio">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="47.0" prefWidth="100.0" text="Preço:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="118.0" layoutY="361.0" prefHeight="274.0" prefWidth="638.0">
+         <children>
+            <Label fx:id="nome" prefHeight="42.0" prefWidth="635.0" />
+            <Label fx:id="diretor" prefHeight="44.0" prefWidth="635.0" />
+            <Label fx:id="ano" prefHeight="49.0" prefWidth="637.0" />
+            <Label fx:id="genero" prefHeight="41.0" prefWidth="635.0" />
+            <Label fx:id="estudio" prefHeight="42.0" prefWidth="635.0" />
+            <Label fx:id="preco" prefHeight="56.0" prefWidth="635.0" />
+         </children>
+      </VBox>
+      <Label fx:id="erro" layoutX="467.0" layoutY="120.0" prefHeight="35.0" prefWidth="281.0" textFill="RED">
+         <font>
+            <Font name="Reem Kufi Regular" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="erro1" layoutX="299.0" layoutY="212.0" prefHeight="35.0" prefWidth="448.0" textFill="RED">
+         <font>
+            <Font name="Reem Kufi Regular" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

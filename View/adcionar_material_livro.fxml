@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="699.0" prefWidth="764.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projeto_library.AdcionarMaterialLivroController">
+   <children>
+      <Label layoutX="22.0" layoutY="14.0" prefHeight="79.0" prefWidth="734.0" text="Adcionar Livros">
+         <font>
+            <Font name="Reem Kufi Regular" size="51.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.7251184834123223" startX="0.7630331753554502" startY="0.46445497630331756">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.5904762148857117" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@add_livros.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <TextField fx:id="titulo" layoutX="22.0" layoutY="189.0" prefHeight="25.0" prefWidth="385.0" />
+      <TextField fx:id="estoque" layoutX="435.0" layoutY="189.0" prefHeight="25.0" prefWidth="151.0" />
+      <ChoiceBox fx:id="genero" layoutX="22.0" layoutY="273.0" prefHeight="25.0" prefWidth="165.0" />
+      <TextField fx:id="editora" layoutX="239.0" layoutY="273.0" prefHeight="25.0" prefWidth="165.0" />
+      <TextField fx:id="autor" layoutX="436.0" layoutY="273.0" prefHeight="25.0" prefWidth="310.0" />
+      <TextField fx:id="ano" layoutX="624.0" layoutY="189.0" prefHeight="25.0" prefWidth="123.0" />
+      <TextField fx:id="sinopse" layoutX="25.0" layoutY="445.0" prefHeight="194.0" prefWidth="714.0" />
+      <Label layoutX="22.0" layoutY="158.0" prefHeight="26.0" prefWidth="114.0" text="Título:" textFill="#2200ff">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="435.0" layoutY="158.0" prefHeight="26.0" prefWidth="114.0" text="Estoque:" textFill="#2200ff">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="624.0" layoutY="158.0" prefHeight="26.0" prefWidth="39.0" text="Ano:" textFill="#2200ff">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="243.0" prefHeight="26.0" prefWidth="114.0" text="Gênero:" textFill="#2200ff">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="239.0" layoutY="243.0" prefHeight="26.0" prefWidth="114.0" text="Editora:" textFill="#2200ff">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="435.0" layoutY="243.0" prefHeight="26.0" prefWidth="114.0" text="Autor:" textFill="#2200ff">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="400.0" prefHeight="35.0" prefWidth="114.0" text="Sinopse:">
+         <font>
+            <Font name="Reem Kufi Regular" size="23.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.8815165876777251" endY="0.5829383886255924" startX="0.8672985781990521" startY="0.5308056872037915">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8899999856948853" green="0.5139114260673523" blue="0.11569999903440475" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="preco" layoutX="22.0" layoutY="358.0" prefHeight="25.0" prefWidth="165.0" />
+      <Label layoutX="22.0" layoutY="324.0" prefHeight="26.0" prefWidth="114.0" text="Preço:" textFill="#2200ff">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="635.0" layoutY="652.0" onAction="#addLivros" prefHeight="27.0" prefWidth="104.0" style="-fx-background-color: Blue;" text="Enviar" textFill="WHITE">
+         <font>
+            <Font name="Reem Kufi Regular" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="copia_error" layoutX="255.0" layoutY="342.0" prefHeight="72.0" prefWidth="483.0" textFill="RED">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="titulo_vazio" layoutX="82.0" layoutY="163.0" prefHeight="17.0" prefWidth="210.0" textFill="RED" />
+      <Label fx:id="estoque_vazio" layoutX="511.0" layoutY="163.0" prefHeight="17.0" prefWidth="72.0" textFill="RED" />
+      <Label fx:id="ano_vazio" layoutX="671.0" layoutY="165.0" prefHeight="17.0" prefWidth="87.0" textFill="RED" />
+      <Label fx:id="genero_vazio" layoutX="93.0" layoutY="248.0" prefHeight="17.0" prefWidth="93.0" textFill="RED" />
+      <Label fx:id="editora_vazio" layoutX="309.0" layoutY="248.0" prefHeight="17.0" prefWidth="93.0" textFill="RED" />
+      <Label fx:id="autor_vazio" layoutX="486.0" layoutY="248.0" prefHeight="17.0" prefWidth="258.0" textFill="RED" />
+      <Label fx:id="preco_vazio" layoutX="79.0" layoutY="329.0" prefHeight="17.0" prefWidth="104.0" textFill="RED" />
+      <Label fx:id="sinopse_vazio" layoutX="112.0" layoutY="414.0" prefHeight="17.0" prefWidth="232.0" textFill="RED" />
+   </children>
+</Pane>

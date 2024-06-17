@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="699.0" prefWidth="764.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projeto_library.PedirLivrosController">
+   <children>
+      <Label layoutX="29.0" layoutY="28.0" text="Pedir Livros">
+         <font>
+            <Font name="Reem Kufi Regular" size="38.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.5734597156398105" startX="0.6208530805687204" startY="0.4549763033175355">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.5827160477638245" blue="0.03703703731298447" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bookp_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="8.0" layoutY="110.0" prefHeight="35.0" prefWidth="504.0" text="Entre com o nome do Livro que deseja pedir:" textFill="#ff950a">
+         <font>
+            <Font name="Reem Kufi Regular" size="23.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="escolha_livro" layoutX="12.0" layoutY="152.0" prefHeight="25.0" prefWidth="439.0" />
+      <Label layoutX="8.0" layoutY="315.0" prefHeight="35.0" prefWidth="504.0" text="Detalhes:" textFill="#ff950a">
+         <font>
+            <Font name="Reem Kufi Regular" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="225.0" prefHeight="35.0" prefWidth="504.0" text="Marque a Data de dentrega:" textFill="#ff950a">
+         <font>
+            <Font name="Reem Kufi Regular" size="23.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="escolha_data" layoutX="12.0" layoutY="266.0" prefHeight="25.0" prefWidth="276.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="264.0" layoutX="8.0" layoutY="352.0" stroke="BLACK" strokeType="INSIDE" width="748.0" />
+      <VBox layoutX="8.0" layoutY="352.0" prefHeight="264.0" prefWidth="103.0">
+         <children>
+            <Label alignment="BASELINE_CENTER" prefHeight="43.0" prefWidth="111.0" text="Nome:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_CENTER" prefHeight="48.0" prefWidth="110.0" text="Autor:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="121.0" text="Ano:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="111.0" text="Gênero:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="135.0" text="Editora:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="47.0" prefWidth="119.0" text="Preço:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="121.0" layoutY="352.0" prefHeight="264.0" prefWidth="635.0">
+         <children>
+            <Label fx:id="nome" prefHeight="42.0" prefWidth="635.0" />
+            <Label fx:id="autor" prefHeight="44.0" prefWidth="635.0" />
+            <Label fx:id="ano" prefHeight="49.0" prefWidth="637.0" />
+            <Label fx:id="genero" prefHeight="41.0" prefWidth="635.0" />
+            <Label fx:id="editora" prefHeight="42.0" prefWidth="635.0" />
+            <Label fx:id="preco" prefHeight="42.0" prefWidth="635.0" />
+         </children>
+      </VBox>
+      <JFXButton alignment="CENTER" layoutX="650.0" layoutY="643.0" onAction="#addToWishList" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: BLUE;" text="  Enviar" textFill="WHITE">
+         <font>
+            <Font name="Reem Kufi Regular" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-arrow-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="erro" layoutX="457.0" layoutY="110.0" prefHeight="35.0" prefWidth="258.0" textFill="RED">
+         <font>
+            <Font name="Reem Kufi Regular" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="erro1" layoutX="298.0" layoutY="225.0" prefHeight="35.0" prefWidth="258.0" textFill="RED">
+         <font>
+            <Font name="Reem Kufi Regular" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

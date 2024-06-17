@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projeto_library.EscolhaLogin_Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="102.0" layoutX="110.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="381.0" AnchorPane.rightAnchor="109.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.933649289099526">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9736841917037964" green="0.42192983627319336" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label alignment="CENTER" layoutX="175.0" layoutY="30.0" prefHeight="62.0" prefWidth="250.0" text="FirePages" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Light" size="39.0" />
+         </font>
+      </Label>
+      <Button fx:id="botao_adm" layoutX="164.0" layoutY="280.0" mnemonicParsing="false" onAction="#login_adm" prefHeight="25.0" prefWidth="113.0" text="Administrador" />
+      <Button fx:id="botao_usu" layoutX="324.0" layoutY="280.0" mnemonicParsing="false" onAction="#login_usuario" prefHeight="25.0" prefWidth="113.0" text="Cliente" />
+      <TextField fx:id="usuario" layoutX="159.0" layoutY="150.0" prefHeight="25.0" prefWidth="282.0" />
+      <Label layoutX="162.0" layoutY="128.0" prefHeight="17.0" prefWidth="80.0" text="Usuário:" textFill="#0c27f7">
+         <font>
+            <Font name="Microsoft YaHei UI Light" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="162.0" layoutY="184.0" prefHeight="17.0" prefWidth="80.0" text="Senha:" textFill="#0c27f7">
+         <font>
+            <Font name="Microsoft YaHei UI Light" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="252.0" prefHeight="17.0" prefWidth="160.0" text="Como você deseja entrar? " textFill="#0c27f7">
+         <font>
+            <Font name="Microsoft YaHei UI Light" size="12.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="senha" layoutX="159.0" layoutY="210.0" prefHeight="25.0" prefWidth="282.0" />
+      <Label fx:id="usuario_incorreto" layoutX="210.0" layoutY="128.0" prefHeight="17.0" prefWidth="160.0" textFill="#f50c0c">
+         <font>
+            <Font name="Microsoft YaHei UI Light" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="senha_incorreta" layoutX="202.0" layoutY="184.0" prefHeight="17.0" prefWidth="160.0" textFill="#f50c0c">
+         <font>
+            <Font name="Microsoft YaHei UI Light" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="221.0" layoutY="325.0" prefHeight="17.0" prefWidth="160.0" text="Ainda não é Cadastrado?" textFill="#0c27f7">
+         <font>
+            <Font name="Microsoft YaHei UI Light" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="botao_cadastro" layoutX="233.0" layoutY="355.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="25.0" prefWidth="113.0" text="Cadastre-se" />
+   </children>
+</AnchorPane>

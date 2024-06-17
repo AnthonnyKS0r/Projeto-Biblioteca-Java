@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="699.0" prefWidth="764.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projeto_library.AcervoFilmesUsuController">
+   <children>
+      <Label layoutX="17.0" layoutY="14.0" text="Acervo de Filmes">
+         <font>
+            <Font name="Reem Kufi Regular" size="48.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.8815165876777251" endY="0.5829383886255924" startX="0.8672985781990521" startY="0.5308056872037915">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8899999856948853" green="0.5139114260673523" blue="0.11569999903440475" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="24.0" layoutY="108.0" text="Selecione o Filme Desejado:">
+         <font>
+            <Font name="Reem Kufi Regular" size="23.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.8815165876777251" endY="0.5829383886255924" startX="0.8672985781990521" startY="0.5308056872037915">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8899999856948853" green="0.5139114260673523" blue="0.11569999903440475" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ChoiceBox fx:id="Filmes_choice" layoutX="25.0" layoutY="143.0" prefHeight="25.0" prefWidth="340.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="173.0" layoutX="11.0" layoutY="512.0" stroke="BLACK" strokeType="INSIDE" width="742.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="264.0" layoutX="8.0" layoutY="218.0" stroke="BLACK" strokeType="INSIDE" width="748.0" />
+      <VBox layoutX="8.0" layoutY="218.0" prefHeight="264.0" prefWidth="103.0">
+         <children>
+            <Label alignment="BASELINE_CENTER" prefHeight="44.0" prefWidth="100.0" text="Nome:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_CENTER" prefHeight="48.0" prefWidth="100.0" text="Diretor:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="100.0" text="Ano:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="100.0" text="Gênero:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="100.0" text="Estúdio">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="47.0" prefWidth="100.0" text="Preço:">
+               <font>
+                  <Font name="Reem Kufi Regular" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="121.0" layoutY="218.0" prefHeight="264.0" prefWidth="635.0">
+         <children>
+            <Label fx:id="nome" prefHeight="42.0" prefWidth="635.0" />
+            <Label fx:id="autor" prefHeight="44.0" prefWidth="635.0" />
+            <Label fx:id="ano" prefHeight="49.0" prefWidth="637.0" />
+            <Label fx:id="genero" prefHeight="41.0" prefWidth="635.0" />
+            <Label fx:id="editora" prefHeight="42.0" prefWidth="635.0" />
+            <Label fx:id="preco" prefHeight="42.0" prefWidth="635.0" />
+         </children>
+      </VBox>
+      <Label fx:id="sino" layoutX="4.0" layoutY="512.0" prefHeight="173.0" prefWidth="748.0" textFill="WHITE">
+         <font>
+            <Font name="Reem Kufi Regular" size="19.0" />
+         </font>
+      </Label>
+      <ScrollBar layoutX="738.0" layoutY="512.0" orientation="VERTICAL" prefHeight="173.0" prefWidth="14.0" />
+   </children>
+</AnchorPane>
